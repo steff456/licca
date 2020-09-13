@@ -35,6 +35,6 @@ public class CloneUIFrame extends JFrame {
 		new CloneUIFrame();
 	}
 
-	
+
 
 }

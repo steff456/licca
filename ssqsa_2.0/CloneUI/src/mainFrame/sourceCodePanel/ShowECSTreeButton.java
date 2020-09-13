@@ -12,14 +12,14 @@ public class ShowECSTreeButton extends JButton {
 
 
 	private static final long serialVersionUID = 3493691199206147286L;
-	
+
 	private ECSTree tree;
-	
+
 	public ShowECSTreeButton() {
 		super("Show eCST");
 		setEnabled(false);
 		addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new ECSTVisualizer(tree);

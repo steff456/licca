@@ -18,26 +18,27 @@ import org.xml.sax.SAXParseException;
 
 
 
-public class Languages{ 
-	
+public class Languages{
+
 	ArrayList<Language> languages;
 	public Document document;
 
-	public Languages(){		
+	public Languages(){
 		languages = createLanguagesList();
 	}
-	
+
 	public ArrayList<Language> createLanguagesList(){
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		languages = new ArrayList<Language>();
 		try {
-			
+
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			this.document = builder.parse( new File(".." + File.separator + "XML" + File.separator + "Languages" + File.separator + "languages.xml" ));
+			// this.document = builder.parse( new File("../.." + File.separator + "XML" + File.separator + "Languages" + File.separator + "languages.xml" ));
+			this.document = builder.parse( new File("/Users/tefa/Documents/Tesis/licca/ssqsa_2.0/XML/Languages/languages.xml"));
 			Node rootNode = this.document.getFirstChild();
 			return getLanguages(rootNode);
-			
+
 		}catch (ParserConfigurationException pce) {
 			// Parser with specified options can't be built
 			pce.printStackTrace();
@@ -70,16 +71,16 @@ public class Languages{
 	{
 		NodeList nodeList = n.getChildNodes();
 		int nodeListLength = nodeList.getLength();
-		
+
 		for (int i=0; i < nodeListLength; i++) {
 				Language lang = new Language();
-			
+
 				Node subNode = nodeList.item(i);
-				
+
 				if (subNode.getNodeName().compareTo("language") == 0)
 				{
 					NamedNodeMap attributes = subNode.getAttributes();
-							
+
 					lang.setName(attributes.getNamedItem("name").getNodeValue());
 
 					lang.setLexer(attributes.getNamedItem("lexer").getNodeValue());
@@ -89,7 +90,7 @@ public class Languages{
 					lang.setCaseSensitive(Boolean.parseBoolean(attributes.getNamedItem("caseSensitive").getNodeValue()));
 
 					NodeList subNodeList = subNode.getChildNodes();
-					
+
 					for (int j = 0; j < subNodeList.getLength(); j++){
 						Node subSubNode = subNodeList.item(j);
 						if (subSubNode.getNodeName().compareTo("extension") == 0)
@@ -97,12 +98,12 @@ public class Languages{
 					}
 					languages.add(lang);
 				}
-			
+
 				//lang.clearFields();
 			}
 			return languages;
 	}
-	
+
 	public Language findLanguage(String extension){
 //		languages = createLanguagesList();
 		for (int i = 0; i < languages.size(); i++){
@@ -114,9 +115,9 @@ public class Languages{
 			}
 		}
 		return null;
-		
+
 	}
-	
+
 	public int getNumberOfLanguages(){
 		int length = 0;
 		Iterator<Language> it = languages.iterator();
@@ -125,13 +126,13 @@ public class Languages{
 			it.next();
 		}
 		return length;
-		
-		
+
+
 	}
-	
+
 	public Language getLanguage(int index){
-		return languages.get(index);	
-		
+		return languages.get(index);
+
 	}
 
 }

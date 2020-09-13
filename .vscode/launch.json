@@ -1,0 +1,246 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<CloneDetection>",
+            "request": "launch",
+            "mainClass": "cloneDetection.Main",
+            "projectName": "CloneDetection",
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CloneUIFrame<CloneUI>",
+            "request": "launch",
+            "mainClass": "mainFrame.CloneUIFrame",
+            "projectName": "CloneUI"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "antlr.Tool",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<SSQSA_v2.0>(1)",
+            "request": "launch",
+            "mainClass": "antlr.build.Tool",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ASTFrame<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "antlr.debug.misc.ASTFrame",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<SSQSA_v2.0>(2)",
+            "request": "launch",
+            "mainClass": "antlr.preprocessor.Tool",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ECSTStructure<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "ecst.util.ECSTStructure",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GDNStructure<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "gdn.util.GDNStructure",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<SSQSA_v2.0>(3)",
+            "request": "launch",
+            "mainClass": "org.antlr.Tool",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Interp<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.gunit.Interp",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<SSQSA_v2.0>(4)",
+            "request": "launch",
+            "mainClass": "org.antlr.gunit.swingui.Tool",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringTemplateTreeView<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.stringtemplate.misc.StringTemplateTreeView",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GrammarSpelunker<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.GrammarSpelunker",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Interp<SSQSA_v2.0>(1)",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.Interp",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RandomPhrase<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.RandomPhrase",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Strip<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.Strip",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CollectionUtils<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.apache.commons.collections15.CollectionUtils",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-STViz<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "org.stringtemplate.v4.gui.STViz",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Snippet<SSQSA_v2.0>",
+            "request": "launch",
+            "mainClass": "snippet.Snippet",
+            "projectName": "SSQSA_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "antlr.Tool",
+            "projectName": "eCSTGenerator_v2.0",
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<eCSTGenerator_v2.0>(1)",
+            "request": "launch",
+            "mainClass": "antlr.build.Tool",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ASTFrame<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "antlr.debug.misc.ASTFrame",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<eCSTGenerator_v2.0>(2)",
+            "request": "launch",
+            "mainClass": "antlr.preprocessor.Tool",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-eCSTGenerator<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "eCSTGenerator.eCSTGenerator",
+            "projectName": "eCSTGenerator_v2.0",
+            "args": "/Users/tefa/Documents/Tesis/licca/test/sumProd/sumProdJava /Users/tefa/Desktop/prueba"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<eCSTGenerator_v2.0>(3)",
+            "request": "launch",
+            "mainClass": "org.antlr.Tool",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Interp<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.gunit.Interp",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Tool<eCSTGenerator_v2.0>(4)",
+            "request": "launch",
+            "mainClass": "org.antlr.gunit.swingui.Tool",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringTemplateTreeView<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.stringtemplate.misc.StringTemplateTreeView",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GrammarSpelunker<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.GrammarSpelunker",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Interp<eCSTGenerator_v2.0>(1)",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.Interp",
+            "projectName": "eCSTGenerator_v2.0"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RandomPhrase<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.RandomPhrase",
+            "projectName": "eCSTGenerator_v2.0",
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Strip<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "org.antlr.tool.Strip",
+            "projectName": "eCSTGenerator_v2.0",
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CollectionUtils<eCSTGenerator_v2.0>",
+            "request": "launch",
+            "mainClass": "org.apache.commons.collections15.CollectionUtils",
+            "projectName": "eCSTGenerator_v2.0",
+        }
+    ]
+}

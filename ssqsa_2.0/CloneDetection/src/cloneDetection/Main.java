@@ -22,6 +22,7 @@ public class Main {
 		}
 
 		List<ECSTree> compilationUnits = collectCompilationUnits(args);
+		System.out.println(compilationUnits.size());
 		Results results = new LCSCloneDetective()
 				.detectClones(compilationUnits);
 		exportResults(args[1], results);
