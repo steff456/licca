@@ -14,7 +14,7 @@
         <pathelement location="bin"/>
         <pathelement location="lib/collections-generic-4.01.jar"/>
         <pathelement location="lib/commons-io-2.4.jar"/>
-        <pathelement location="lib/antlr-3.2.jar"/>
+        <pathelement location="lib/antlr-4.7.1-complete.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>

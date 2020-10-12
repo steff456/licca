@@ -1,26 +1,29 @@
 package ecst.postprocessor.completition.comment;
 
-import org.antlr.runtime.CharStream;
-import org.antlr.runtime.Token;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.TokenSource;
 
-public class UniversalToken implements Token{
+public class UniversalToken implements Token {
 	private int type;
 	private String text;
 	private int line;
-	private int tokenIndex;	
+	private int tokenIndex;
 	private int charPositionInLine;
-	
-	private int channel;		
-	private CharStream inputStream;	
-	
-	public UniversalToken(int type, String text, int line, int index, int column){			
+
+	private int channel;
+	private CharStream inputStream;
+	private TokenSource source;
+
+	public UniversalToken(int type, String text, int line, int index, int column, TokenSource source) {
 		this.type = type;
 		this.text = text;
 		this.line = line;
 		this.tokenIndex = index;
 		this.charPositionInLine = column;
+		this.source = source;
 	}
-	
+
 	@Override
 	public int getChannel() {
 		return channel;
@@ -57,45 +60,18 @@ public class UniversalToken implements Token{
 	}
 
 	@Override
-	public void setChannel(int arg0) {
-
-		this.channel = arg0;
-		
+	public int getStartIndex() {
+		return this.tokenIndex;
 	}
 
 	@Override
-	public void setCharPositionInLine(int arg0) {
-		this.charPositionInLine = arg0;
+	public int getStopIndex() {
+		return this.tokenIndex + this.text.length();
 	}
 
 	@Override
-	public void setInputStream(CharStream arg0) {
-		this.inputStream = arg0;	
-		
+	public TokenSource getTokenSource() {
+		return this.source;
 	}
 
-	@Override
-	public void setLine(int arg0) {
-		this.line = arg0;
-		
-	}
-
-	@Override
-	public void setText(String arg0) {
-		this.text = arg0;
-		
-	}
-
-	@Override
-	public void setTokenIndex(int arg0) {
-		this.tokenIndex = arg0;
-		
-	}
-
-	@Override
-	public void setType(int arg0) {
-		this.type = arg0;
-		
-	}
-	
 }

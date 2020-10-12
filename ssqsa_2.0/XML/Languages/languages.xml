@@ -1,73 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <languages>
-	<language name="java" lexer="Languages.java.SSQSA_JavaLexer" parser="Languages.java.SSQSA_JavaParser"
-		startRule="startNonterminal" returnClass="startNonterminal_return" caseSensitive="true">
+	<language name="java"
+		lexer="Languages.java.Java9Lexer"
+		parser="Languages.java.Java9Parser"
+		startRule="startNonterminal"
+		returnClass="startNonterminal_return"
+		caseSensitive="true">
 		<extension>java</extension>
 	</language>
 
-	<language name="modula2" lexer="Languages.m2.SSQSA_M2Lexer"
-		parser="Languages.m2.SSQSA_M2Parser" startRule="startNonterminal"
-		returnClass="startNonterminal_return" caseSensitive="true">
+	<language name="modula2"
+		lexer="Languages.m2.SSQSA_M2Lexer"
+		parser="Languages.m2.SSQSA_M2Parser"
+		startRule="startNonterminal"
+		returnClass="startNonterminal_return"
+		caseSensitive="true">
 		<extension>mod</extension>
 	</language>
-	
-	<language name="CSharp" startRule="compilation_unit"
+
+	<language name="CSharp"
+		startRule="compilation_unit"
 		lexer="Languages.CSharp.CSharpLexer"
 		parser="Languages.CSharp.CSharpParser"
-		returnClass="compilation_unit_return" caseSensitive="true">
+		returnClass="compilation_unit_return"
+		caseSensitive="true">
 		<extension>cs</extension>
 	</language>
-	
-	<language name="Delphi" lexer="Languages.delphi.SSQSA_DelphiLexer"
+
+	<language name="Delphi"
+		lexer="Languages.delphi.SSQSA_DelphiLexer"
 		parser="Languages.delphi.SSQSA_DelphiParser"
-		startRule="startNonterminal" returnClass="startNonterminal_return"
+		startRule="startNonterminal"
+		returnClass="startNonterminal_return"
 		caseSensitive="false">
 		<extension>pas</extension>
 	</language>
-	<language name="C" 
-		lexer="Languages.c.CLangLexer"
-		parser="Languages.c.CLangParser"
+	<language name="C"
+		lexer="Languages.c.CLexer"
+		parser="Languages.c.CParser"
 		startRule="translation_unit"
-		returnClass="translation_unit_return" 
+		returnClass="translation_unit_return"
 		caseSensitive="true">
 		<extension>c</extension>
 	</language>
-	
-	<language name="Python" 
+
+	<language name="Python"
 		lexer="Languages.python.PythonLexer"
 		parser="Languages.python.PythonParser"
 		startRule="file_input"
-		returnClass="file_input_return" 
+		returnClass="file_input_return"
 		caseSensitive="true">
 		<extension>py</extension>
 	</language>
-	
-	<language name="WSL" 
+
+	<language name="WSL"
 		lexer="Languages.wsl.WSLLexer"
 		parser="Languages.wsl.WSLParser"
-		startRule="program" 
+		startRule="program"
 		returnClass="program_return"
 		caseSensitive="true">
 		<extension>wsl</extension>
 	</language>
-	
-	<language name="JavaScript" 
+
+	<language name="JavaScript"
         lexer="Languages.javaScript.JavaScriptLexer"
         parser="Languages.javaScript.JavaScriptParser"
         startRule="program"
-        returnClass="program_return" 
-        caseSensitive="true"> 
-        <extension>js</extension> 
-    </language> 
-	
-	<language name="PHP" 
+        returnClass="program_return"
+        caseSensitive="true">
+        <extension>js</extension>
+    </language>
+
+	<language name="PHP"
         lexer="Languages.php.PhpLexer"
         parser="Languages.php.PhpParser"
         startRule="prog"
-        returnClass="prog_return" 
-        caseSensitive="true"> 
-        <extension>php</extension> 
-    </language> 
+        returnClass="prog_return"
+        caseSensitive="true">
+        <extension>php</extension>
+    </language>
 	<language name="Scheme"
 		lexer="Languages.scheme.SchemeLexer"
 		parser="Languages.scheme.SchemeParser"
@@ -75,5 +86,21 @@
 		returnClass="compilation_unit_return"
 		caseSensitive="true">
 		<extension>scm</extension>
+	</language>
+	<language name="Swift3"
+		lexer="Languages.swift.Swift3Lexer"
+		parser="Languages.swift.Swift3Parser"
+		startRule="translation_unit"
+		returnClass="translation_unit_return"
+		caseSensitive="true">
+		<extension>swift</extension>
+	</language>
+	<language name="Kotlin"
+		lexer="Languages.kotlin.KotlinLexer"
+		parser="Languages.kotlin.KotlinParser"
+		startRule="startNonterminal"
+		returnClass="startNonterminal_return"
+		caseSensitive="true">
+		<extension>swift</extension>
 	</language>
 </languages>

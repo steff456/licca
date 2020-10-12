@@ -12,25 +12,25 @@ public class ECSTSort {
 
 	private static CommonTree minTree = null;
 	private static CommonTree maxTree = null;
-	
-	public static void Sort(CommonTree tree, List<CommonTree> subtrees){		
-		
+
+	public static void Sort(CommonTree tree, List<CommonTree> subtrees){
+
 		for (CommonTree subtree : subtrees){
 			CommonTree comment = (CommonTree)subtree.getChild(0);
 			Token commentToken = comment.getToken();
 			findSurroundingChildren(tree, commentToken);
-			
+
 			CommonTree lca = findLowestCommonAncestor(tree, findPathToRoot(minTree), findPathToRoot(maxTree));
 			insertSubtree(lca, subtree, calculateInsertPosition(lca, maxTree));
-			
+
 			minTree = null;
-			maxTree = null;			
+			maxTree = null;
 		}
 		//return tree;
 	}
-	
-	
-	
+
+
+
 	// DEPTH FIRST algoritam za nalazenje tokena koji su neposredno pre i posle tokena komentara
 	private static void findSurroundingChildren(CommonTree tree, Token token){
 		if( tree.getToken().getLine() < token.getLine() ){
@@ -41,9 +41,9 @@ public class ECSTSort {
 					minTree = tree;
 				}
 			}
-			
+
 		}
-		
+
 		if( tree.getToken().getLine() > token.getLine() ){
 			if (maxTree == null){
 				maxTree = tree;
@@ -52,16 +52,16 @@ public class ECSTSort {
 					maxTree = tree;
 				}
 			}
-			
-		} 
-		
+
+		}
+
 		if(tree.getChildCount() > 0){
 			for(CommonTree child : (List<CommonTree>)tree.getChildren()){
 				findSurroundingChildren(child, token);
 			}
 		}
 	}
-	
+
 	// Pronalazi najnizeg zajednickog pretka (LCA)
 	private static CommonTree findLowestCommonAncestor(CommonTree root, Stack<CommonTree> path1, Stack<CommonTree> path2){
 		CommonTree lowestCommonAncestor = root;
@@ -84,16 +84,16 @@ public class ECSTSort {
 						return lowestCommonAncestor;
 					}
 				}
-			}			
+			}
 		}
 
 		return lowestCommonAncestor;
 	}
-	
+
 	// Vraca putanju od deteta do korena, zajedno sa krajnjim tackama
 	private static Stack<CommonTree> findPathToRoot(CommonTree child){
 		Stack<CommonTree> path = new Stack<CommonTree>();
-		CommonTree nextParent = child; 
+		CommonTree nextParent = child;
 		if(nextParent.getParent() == null){
 			return null;
 		}
@@ -101,10 +101,10 @@ public class ECSTSort {
 			path.push(nextParent);
 			nextParent = (CommonTree)nextParent.getParent();
 		}
-		
+
 		return path;
 	}
-	
+
 	// Ubacuje podstablo u podstablo na tacno odredjenu poziciju
 	private static void insertSubtree(CommonTree tree, CommonTree subtree, int position){
 		ArrayList<CommonTree> children = new ArrayList<CommonTree>();
@@ -126,8 +126,8 @@ public class ECSTSort {
 			position = nextParent.getChildIndex();
 			nextParent = (CommonTree)nextParent.getParent();
 		}
-		
+
 		return position;
-	}	
-	
+	}
+
 }

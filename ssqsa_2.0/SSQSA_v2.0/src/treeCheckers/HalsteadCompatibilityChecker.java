@@ -24,8 +24,8 @@ public class HalsteadCompatibilityChecker extends CompatibilityChecker {
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
-	
+
 }
